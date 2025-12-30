@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROFIE</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="../static/car_images/company_logo.png">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 90px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        
+            background-position: center;
+        }
+
+        
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .table-row div {
+            width: 48%;
+        }
+
+        .table-row label {
+            font-weight: bold;
+            color: #333;
+        }
+
+       
+        .car_contact{
+
+            display: flex;
+            width:80%
+            padding: 30px;
+            height: 150px;
+            margin: 0;
+        }
+        .car_contact > .car{
+            width:300px;
+            height: 100px;
+            margin: 0;
+        
+        
+
+        }
+        .car_contact > .address{
+            width:400px;
+            height:200px
+            
+            
+            
+
+        }
+
+        .car_contact > .contact{
+            width:500px;
+            height:200px;
+            margin-left: 100px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="indexheader">
+        <h1>GSD CARS </h1>
+   </div>
+    
+   <div class="nav">
+    <ul>
+     <li><a href="">My profile</a></li>
+    
+     <li><a href="/contact">Contact Us</a></li>
+     
+     <li><a href="/companys">Book Now</a></li>
+     
+     <li><a href="{% url 'index' %}">Home</a></li>
+
+     
+
+    
+    
+     <div class="logo">
+        <img src="../static/car_images/company_logo.png" style="width:70px; height:70px; border-radius: 70px; margin-left: 10px;">
+         </div> 
+     
+    </ul>
+</div>
+    
+
+    <div class="container">
+        
+        <h1 style="text-align: center; background-color:darkgoldenrod; padding: 30px; color: whitesmoke;"  > GSD Cars Gudiyatham</h1>
+        <div class="car_contact">
+            <div class="car">
+                <img src="../static/car_images/company_logo.png" width="100px" height="100px" >
+            </div>
+            <div class="address">
+                
+                <p><b>Address:</b> No 78 Gandhi Nagar, Kondasamudram, Gudiyatham, Tamil Nadu 632602</p>
+            </div>
+            <div class="contact">
+                <p>
+   <b> Whatsapp:</b> +91 6382579595
+    <br>
+        <b>Contact:</b> +91 6382579595
+        <br>
+        
+   <b> Email:</b> gsdcarsgudiyatham@gmail.com
+            </p>
+
+        </div>
+        
+
+        </div>
+        <br>
+        <br>
+        
+        <div class="table-row">
+            <div><label>NAME:</label></div>
+            <div>{{logger_data.full_name}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>FATHER NAME:</label></div>
+            <div>{{logger_data.father_name}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>MOTHER NAME:</label></div>
+            <div>{{logger_data.mother_name}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>GENDER:</label></div>
+            <div>{{logger_data.gender}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>DATE OF BIRTH:</label></div>
+            <div>{{logger_data.dob}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>BOOKING NUMBER:</label></div>
+            <div>{{logger_data.booking_number}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>BOOKED MODEL:</label></div>
+            <div>{{logger_data.car_model}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>NO OF DAYS:</label></div>
+            <div>{{logger_data.days}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>PICKUP DATE:</label></div>
+            <div>{{logger_data.pickup_date}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>DROP DATE:</label></div>
+            <div>{{logger_data.drop_date}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>LICENCE TYPE:</label></div>
+            <div>{{logger_data.licence_type}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>LICENCE NO:</label></div>
+            <div>{{logger_data.licence_number}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>AADHAR NO:</label></div>
+            <div>{{logger_data.aadhar_number}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>EMAIL ID:</label></div>
+            <div>{{logger_data.email_id}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>PHONE NUMBER:</label></div>
+            <div>{{logger_data.phone_number}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>ALTERNATIVE NO:</label></div>
+            <div>{{logger_data.alternative_number}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>STATE:</label></div>
+            <div>{{logger_data.state}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>DISTRICT:</label></div>
+            <div>{{logger_data.district}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>PIN CODE:</label></div>
+            <div>{{logger_data.pincode}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>CURRENT ADDRESS:</label></div>
+            <div>{{logger_data.current_address}}</div>
+        </div>
+
+        <div class="table-row">
+            <div><label>PERMANENT ADDRESS:</label></div>
+            <div>{{logger_data.permanent_address}}</div>
+        </div>
+    </div>
+    <hr>
+    <br>
+
+    <center>
+
+        <h1>Cancellation</h1>
+        <br>
+        <br>
+           <a href="/cancel_booking" ><button type="button" style="width: 150px; height:60px ; border:4px solid red; border-radius: 20px; color: white; background-color: black; font-size: 20px; margin-bottom: 100px;">Cancel</button></a>
+         <br>
+         <br>
+         <br>
+         <hr>
+    <h1>Review</h1>
+    
+    <form id="register" action="/user_profile" method="POST" class="review_form">
+        {% csrf_token %}
+    
+
+    <br>
+    <textarea name="review" placeholder="Feedback" style="width: 600px; height: 300px; border-radius: 10px;"></textarea>
+    <input type="hidden" name="booking_number" value="{{logger_data.booking_number }}">
+    <input type="hidden" name="email_id" value="{{ logger_data.email_id }}">  
+    <br>
+    <br>
+    <br>
+    <button type="submit" style="width: 150px; height:60px ; border:3px solid blue; border-radius: 30px; color: white; background-color: black; font-size: 20px; margin-bottom: 100px;">Submit</button>
+
+    </center>
+    </form>
+
+
+</body>
+</html>
+
