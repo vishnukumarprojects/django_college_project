@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-evjblmppa=n0(1ee+i33+=+4c^+ix99272tkgz9%pe&4p1q^nt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['car-rental-management-zyq6.onrender.com',]
+ALLOWED_HOSTS = [*]
 
 # Application definition
 
