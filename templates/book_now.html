@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKING</title>
+    <link rel="icon" href="../static/logo.png">
+    <link rel="stylesheet" href="../static/style.css">
+
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+           label p{
+            font-size: 16px;
+           }
+            button{
+                width:150px;
+                height:50px;
+                border-radius: 5px;
+                border:4px solid grey;
+                margin-top: 650px;
+                position: absolute;
+                
+            }
+            button:hover{
+                background-color:gainsboro;
+
+            }
+        
+           .flex-container{
+            width: 90%;
+            background-color: #fff;
+            height: 750px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display:flex;
+            margin: 40px auto;
+            justify-content: center;
+
+            }
+
+          .flex-container > .box1{
+           height: 600px;
+           width:1200px;
+           background-position: center;
+           background-size:cover;
+           margin-top: 10px ;
+           margin-left: 50px;
+           padding: 5px;
+           
+           }
+         .flex-container > .box2{
+         height: 600px;
+         width:1200px;
+         margin-top: 120px;
+         background-position: center;
+         background-size:cover;
+         margin:5px;
+         padding:5px;
+         
+         
+         }
+         .flex-container > .box3{
+         height: 600px;
+         width:1100px;
+         background-position: center;
+         background-size:cover;
+         margin:10px;
+         padding: 5px;
+         
+         }
+         .flex-container > .box4{
+         height: 600px;
+         width:1100px;
+         background-position: center;
+         background-size:cover;
+         margin: 10px;
+         padding: 5px;
+         }
+         input[type="text"],[type="email"],[type="tel"],[type="number"],[type="date"],[type="select"],[type="textera"]{
+        height: 25px;
+        width:200px ;
+        border-radius: 5px;
+        border-color:lavender;
+        } 
+    
+    select{
+        font-size: 15px;
+        width: 200px;
+    } 
+
+    
+    </style>
+
+   
+</head>
+<body>
+    <div class="indexheader">
+        <h1>GSD CARS </h1>
+   </div>
+    
+   <div class="nav">
+    <ul>
+     <li><a href="/profile">My profile</a></li>
+    
+     <li><a href="/contact">Contact Us</a></li>
+     
+     <li><a href="/companys">Book Now</a></li>
+     
+     <li><a href="{% url 'index' %}">Home</a></li>
+
+     <div class="logo">
+      <img src="../static/car_images/company_logo.png" style="width:70px; height:70px; border-radius: 70px; margin-left: 10px;">
+       </div> 
+
+    </ul>
+</div>
+
+
+                
+
+    <h1 style="color: red; text-align: center; font-size: 40px; background-color: aqua; padding :8px;  margin-top: 5px;">BOOK NOW</h1>
+
+    <h2 style="text-align: center; color:darkcyan;">Fill the Form</h2>
+    {% for i in messages %}
+    {% if 'already' in i.tags %}
+    <h3 style="color: red; text-align: center;">{{i}}</h3>
+    {% endif %}
+    {% endfor %}
+    <form id="register" action="/book_now" method="POST" class="register_form">
+        {% csrf_token %}
+        
+        
+             <div class="flex-container">
+            
+            <div class="box1">
+            <!-- <h2>Pick and Drop <h2> -->
+           <label> <p>Model:</p></label>
+        
+    
+        <select name="car_model" style="border:4px solid lavender;" >
+            <option value="AUDI A1">AUDI A1</option>
+            <option value="AUDI A3">AUDI A3</option>
+            <option value="AUDI Q4">AUDI Q4</option>
+            <option value="BENZ C-CLASS">BENZ C-CLASS</option>
+            <option value="BENZ CLA">BENZ CLA</option>
+            <option value="BENZ A-CLASS">BENZ A-CLASS</option>
+            <option value="BENZ GLC">BENZ GLC</option>
+            <option value="BMW 335">BMW 335</option>
+            <option value="BMW Z1">BMW Z1</option>
+            <option value="BMW X1">BMW X1</option>
+            <option value="MAHINDRA THAR">MAHINDRA THAR</option>
+            <option value="MAHINDRA SCORPIO">MAHINDRA SCORPIO</option>
+            <option value="MAHINDRA SUV700">MAHINDRA SUV700</option>
+            <option value="MAHINDRA BOLERO"> MAHINDRA BOLERO</option>
+            <option value="KIA SORENTO">KIA SORENTO</option>
+            <option value="KIA K5">KIA K5</option>
+            <option value="KIA NIRO">KIA NIRO</option>
+            <option value="MARUTHI DZIRE">MARUTHI DZIRE</option>
+            <option value="MARUTHI FRONX">MARUTHI FRONX</option>
+            <option value="MARUTHI SPRESSO">MARUTHI SPRESSO</option>
+            <option value="MARUTHI SWIFT">MARUTHI SWIFT</option> 
+             <option value="RENAULT SUVCOMFORT">RENAULT SUVCOMFORT</option>
+            <option value="RENAULT ZOE">RENAULT ZOE</option>
+            <option value="RENAULT TWINGO">RENAULT TWINGO</option> 
+             <option value="RENAULT SYMBOL">RENAULT SYMBOL</option>
+            <option value="TATA PUNCH">TATA PUNCH</option>
+            <option value="TATA NANO">TATA NANO</option>
+            <option value="TATA INDIGO">TATA INDIGO</option>
+            <option value="TATA SAFARI">TATA SAFARI</option>
+            <option value="TOYATO INNOVA">TOYATO INNOVA</option> 
+             <option value="TOYATO FORTUNER">TOYATO FORTUNER</option>
+            <option value="TOYATO LANDCRUISER">TOYATO LANDCRUISER</option>
+            <option value="VOLKSWAGEN VIRTUS">VOLKSWAGEN VIRTUS</option>
+              <option value="VOLKSWAGEN POLO">VOLKSWAGEN POLO</option>
+            <option value="VOLKSWAGEN AMAROK">VOLKSWAGEN AMAROK</option>
+            <option value="VOLKSWAGEN BORA">VOLKSWAGEN BORA</option>
+        </select>
+           <br>
+            <label><p>Choose Days:</p></label>
+            <select name="days" style="border:4px solid lavender;" >
+               <option value="1 DAY">1 DAY</option>
+               <option value="2 DAYS">2 DAYS</option>
+               <option value="3 DAYS">3 DAYS</option>
+               <option value="1 WEEK">1 WEEK</option>
+               <option value="15 DAYS">15 DAYS</option>
+               <option value="1 MONTH">1 MONTH</option>
+               
+               
+
+           </select>
+           <br>
+           
+            <label><p>Choose Pickup Date:</p></label>
+            <input type="date" name="pickup_date" required>
+            <br>
+            
+             <label><p>Choose Drop Date:</p> </label>
+            <input type="date" name="drop_date" required>
+         
+            </div>
+
+
+            <div class="box2">
+        
+            
+        
+            
+            <!-- <h2>Customer Details</h2> -->
+        <label><p>Full Name:</p></label>
+        
+        <input type="text" placeholder="Enter Full Name" name="full_name" required>
+        
+        
+        
+        <label><p>Father Name:</p></label>
+        
+        <input type="text" placeholder="Enter Father Name" name="father_name" required>
+        
+        <br>
+        <label><p>Mother Name:</p></label>
+        
+        <input type="text" placeholder="Enter Mother Name" name="mother_name" required>
+
+            <br>
+        
+        <br>
+        
+        <label><p>Choose Gender:</p></label>
+         
+        <input type="radio" name="gender" value="male" style="margin-left: 10px;">Male
+        <input type="radio" name="gender" value="female" style="margin-left: 10px;">Female
+        
+        <input type="radio" name="gender" value="others" style="margin-left: 10px;">Others
+        <br> 
+        
+            
+        
+        <label><p>Date of Birth:</p></label>
+        
+        <input type="date" placeholder="DD-MM-YYYY" name="dob" required>
+        <br>
+            </div>
+        <br>
+        <div class="box3">
+                    <!-- <h2>Address Details</h2> -->
+        <label><p>State:<p></label>
+        
+        <input type="text" placeholder="Enter you state" name="state" required>
+    
+        <br>
+        <label><p>District:</p></label>
+        
+        <input type="text" placeholder="Enter you District" name="district">
+        
+        <br>
+        <label><p>Pincode:</p></label>
+        
+        <input type="number" placeholder="Enter your Pincode" name="pincode" required>
+        <br>
+        
+        <label><p>Current Address:</p></label>
+        
+    
+    
+        <textarea style="width: 220px; height: 80px; border:5px solid lavender" placeholder="Address" name="current_address"
+        required></textarea>
+        
+        
+        
+        <label><p>Permanent Address:</p></label>
+        <br>
+        
+        
+        <textarea style="width: 220px; height:80px; border:5px solid lavender" placeholder="Address" name="permanent_address" required></textarea>
+        </div>
+        <br>
+    
+        
+        <br>
+        <div class="box4">
+    
+        <label><p>Gmail:</p></label>
+        
+        <input type="email" placeholder="Gmail" name="email_id" required>
+        
+        <br>
+        
+        <label><p>Phone Number:</p></label>
+        
+        <input type="tel" placeholder="Phone number" name="phone_number" required>
+        <br>
+        
+        <label><p>Alternative Phone Number:</p></label>
+    
+        <input type="tel" placeholder="Alternative number" name="alternative_number" maxlength="10" minlength="10" required>
+        <br>
+
+        
+        <label><p>Aadhar Number:</p></label>
+        <input type="number" placeholder="Enter your Aadhar Number" name="aadhar_number" maxlength="12" minlength="12" required>
+        
+        <br>
+        <label><p>Choose Licence Type:</p></label>
+        
+        
+        <select name="licence_type" style="border:4px solid lavender">
+            <option value="LMV">LMV</option>
+            <option value="HMV">HMV</option>
+            <option value="INTERNATIONAL">INTERNATIONAL</option>
+        </select>
+        <br>
+        
+        <label><p>Licence Number:</p></label>
+        
+        <input type="text" placeholder="DL Number" name="licence_number" required>
+    
+        <br>
+
+        
+        </div>
+        
+        
+        <br>
+        <button type="submit" ><b>Submit</b></button>
+        
+        <br>
+        <br>
+           
+        
+
+    </form>
+
+
+
+
+  
+
+    
+</body>
+</html>

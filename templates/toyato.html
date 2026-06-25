@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYATO</title>
+    <link rel="icon" href="../static/company_logos/toyota.png">
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        .header{
+            background-color:lightcoral;
+            padding: 20px;
+            border-radius: 500px;
+            text-align: center;
+        }
+        
+.flex-container{
+    margin-top: 50px;
+    width: 100%;
+    height: 450px;
+    display:flex;
+    /* padding: 20px; */
+    border: 3px solid violet;
+    margin-bottom: 0px;
+    justify-content: center;
+    /* padding: 60px; */
+    
+}
+
+.flex-container > .box1{
+    height: 200px;
+    width:200px;
+    background-position: center;
+    background-image: url('../static/car_images/toyato/images\ \(28\).jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+    margin-top:80px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 50px;
+    /* border: 2px solid black; */
+    
+    
+
+}
+.flex-container > .box2{
+    height: 300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20;
+    /* overflow: hidden; */
+    padding: 60px;
+    /* border: 2px solid black; */
+    
+    
+}
+.flex-container > .box3{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+.flex-container > .box4{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    margin-top: 150px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+
+.flex-container1{
+    margin-top: 50px;
+    width: 100%;
+    height: 450px;
+    display:flex;
+    /* padding: 20px; */
+    border: 3px solid violet;
+    justify-content: center;
+    /* padding: 60px; */
+    
+}
+
+.flex-container1> .box1{
+    height: 200px;
+    width:200px;
+    background-position: center;
+    background-image: url('../static/car_images/toyato/t2.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 60px;
+    /* border: 2px solid black; */
+    
+    
+
+}
+.flex-container1 > .box2{
+    height: 300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20;
+    /* overflow: hidden; */
+    padding: 60px;
+    /* border: 2px solid black; */
+    
+    
+}
+.flex-container1 > .box3{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+.flex-container1 > .box4{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    margin-top: 150px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+
+
+.flex-container2{
+    margin-top: 50px;
+    width: 100%;
+    height: 450px;
+    display:flex;
+    /* padding: 20px; */
+    border: 3px solid violet;
+    justify-content: center;
+    /* padding: 60px; */
+    
+}
+
+.flex-container2> .box1{
+    height: 200px;
+    width:200px;
+    background-position: center;
+    background-image: url('../static/car_images/toyato/t4.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 60px;
+    /* border: 2px solid black; */
+    
+    
+
+}
+.flex-container2 > .box2{
+    height: 300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20;
+    /* overflow: hidden; */
+    padding: 60px;
+    /* border: 2px solid black; */
+    
+    
+}
+.flex-container2 > .box3{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+.flex-container2 > .box4{
+    height:300px;
+    width:200px;
+    background-position: center;
+    background-size:cover;
+    margin: 20px;
+    margin-top: 150px;
+    /* overflow: hidden; */
+    padding: 60px;
+    
+
+    
+}
+
+
+button{
+    width: 250px;
+    height: 70px;
+    border-radius: 70px;
+    border: 5px solid blue;
+    
+}
+button:hover{
+    background-color: lightgoldenrodyellow;
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="indexheader">
+        <h1>GSD CARS </h1>
+   </div>
+    
+   <div class="nav">
+    <ul>
+     <li><a href="/profile">My profile</a></li>
+    
+     <li><a href="contact">Contact Us</a></li>
+     
+     <li><a href="/companys">Book Now</a></li>
+     
+     <li><a href="{% url 'index' %}">Home</a></li>
+
+     <div class="logo">
+        <img src="../static/car_images/company_logo.png" style="width:70px; height:70px; border-radius: 70px; margin-left: 10px;">
+         </div> 
+
+    
+    
+       
+     
+    </ul>
+</div>
+<br>
+    <div class="header">
+        
+        <h1>TOYATO</h1>
+</div>
+
+
+
+
+<div class="flex-container">
+    <div class="box1">
+        <h3 style="color:black;  font-size: 27px; margin-top: 270px;" >Toyato Fortuner</h3>
+       
+       
+    </div>
+    <div class="box2">
+        <h1 style="color: red; margin-left: 25px;">Features</h1>
+
+        <ul>
+            <li><h3>Manual Control</h3></li>
+            <li><h3>Seat Capacity:4</h3></li>
+            <li><h3>Diesel:48liter</h3></li>
+            <li><h3>Power Streeing</h3></li>
+            <li><h3>Driver Air Bag</h3></li>
+            
+        </ul>
+
+    </div>
+    <div class="box3">
+        <h1 style="color: blue; margin-left: 30px; ">Rental </h1>
+           <ul>
+          <li> <h3>1 Day :4000</h3></li>
+            <li><h3>2 Day : 7800</h3></li>
+           <li> <h3>3 Day : 11700</h3></li>
+            <li><h3>1 week :26500</h3></li>
+            <li><h3>15 Days :55800</h3></li>
+            <li><h3>1 Month :100000</h3></li>
+        </ul>
+
+    </div>
+    <div class="box4">
+    <button type="submit" onclick="location.href='/book_now'"><h2>BOOK NOW</h2></button>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="flex-container1">
+    <div class="box1">
+        <h3 style="color:black;  font-size: 27px; margin-top: 270px;" >Toyato Innova</h3>
+       
+       
+    </div>
+    <div class="box2">
+        <h1 style="color: red; margin-left: 25px;">Features</h1>
+
+        <ul>
+            <li><h3>Manual  Control</h3></li>
+            <li><h3>Seat Capacity:4</h3></li>
+            <li><h3>Diesel:51liter</h3></li>
+            <li><h3>Power Sterinng</h3></li>
+            <li><h3>Driver Air Bag</h3></li>
+            <li><h3>Black Glass</h3></li>
+            
+        </ul>
+
+    </div>
+    <div class="box3">
+        <h1 style="color: blue; margin-left: 30px; ">Rental </h1>
+           <ul>
+          <li> <h3>1 Day :5500</h3></li>
+            <li><h3>2 Day :10000</h3></li>
+           <li> <h3>3 Day :15000</h3></li>
+            <li><h3>1 week :33900</h3></li>
+            <li><h3>15 Days :75000</h3></li>
+            <li><h3>1 Month :145000</h3></li>
+        </ul>
+
+    </div>
+    <div class="box4">
+    <button type="submit" onclick="location.href='/book_now'"><h2>BOOK NOW</h2></button>
+    </div>
+</div>
+
+
+
+
+
+<div class="flex-container2">
+    <div class="box1">
+        <h3 style="color:black;  font-size: 23px; margin-top: 270px;" >Toyato Landcrusier</h3>
+       
+       
+    </div>
+    <div class="box2">
+        <h1 style="color: red; margin-left: 25px;">Features</h1>
+
+        <ul>
+            <li><h3>Manual Control</h3></li>
+            <li><h3>Seat Capacity:4</h3></li>
+            <li><h3>Diesel:48liter</h3></li>
+            <li><h3>Power Sterinng</h3></li>
+            <li><h3>Driver Air Bag</h3></li>
+            <li><h3>Child Safety</h3></li>
+        </ul>
+
+    </div>
+    <div class="box3">
+        <h1 style="color: blue; margin-left: 30px; ">Rental </h1>
+           <ul>
+          <li> <h3>1 Day : 4000</h3></li>
+            <li><h3>2 Day 7500</h3></li>
+           <li> <h3>3 Day : 11000</h3></li>
+            <li><h3>1 week :27000</h3></li>
+            <li><h3>15 Days :56000</h3></li>
+            <li><h3>1 Month :110000</h3></li>
+        </ul>
+
+    </div>
+    <div class="box4">
+    <button type="submit" onclick="location.href='/book_now'"><h2>BOOK NOW</h2></button>
+    </div>
+</div>
+
+
+</body>
+</html>

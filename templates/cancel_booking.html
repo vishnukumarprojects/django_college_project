@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .booking{
+            text-align: center;
+            margin-left: 500px;
+            margin-right: 500px;
+            margin-top: 100px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-top: 20px;
+            padding:70px;
+            border-radius: 5px;
+        }
+        input{
+            width:150px;
+            height:20px;
+            border-radius:5px;
+            border-color: lavender;
+        }
+        button{
+            width: 130px;
+            height: 50px;
+            background-color:lemonchiffon;
+            border: 4px solid dimgrey;
+            border-radius: 6px;
+        
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="indexheader">
+        <h1>GSD CARS </h1>
+   </div>
+    
+   <div class="nav">
+    <ul>
+     <li><a href="/profile">My profile</a></li>
+    
+     <li><a href="/contact">Contact Us</a></li>
+     
+     <li><a href="/companys">Book Now</a></li>
+     
+     <li><a href="{% url 'index' %}">Home</a></li>
+
+     <div class="logo">
+      <img src="../static/car_images/company_logo.png" style="width:70px; height:70px; border-radius: 70px; margin-left: 10px;">
+       </div> 
+
+    </ul>
+</div>
+
+    <center>
+    <form action="/cancel_booking" method="POST" class="booking" style="margin-top: 100px;">
+        {% csrf_token %}
+        <h2>Cancellation</h2>
+        <br>
+        <label>Booking No:</label>
+        <input type="text" name="booking_number" placeholder="Enter Booking Number" minlength="20" maxlength="20" required>
+        <br>
+        <br>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email_id" placeholder="Enter You Email ID" minlength="5" maxlength="254" required>  
+        <br>
+        <br>
+        <br>
+        <button type="submit">Cancel Booking</button>
+    </form>
+    </center>
+
+    
+
+    
+
+    
+</body>
+</html>
